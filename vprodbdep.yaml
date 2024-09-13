@@ -30,7 +30,7 @@ spec:
                   name: app-secret
                   key: db_pass
       nodeSelector:
-        failure-domain.beta.kubernetes.io/zone: us-east-1a
+        topology.kubernetes.io/zone: us-east-1a  # Ajustado para coincidir con la etiqueta de los nodos
       volumes:
         - name: vpro-db-data
           awsElasticBlockStore:
@@ -44,5 +44,6 @@ spec:
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: vpro-db-data
+
 
 
