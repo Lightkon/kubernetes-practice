@@ -27,10 +27,10 @@ spec:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
-                    name: app-secret
-                    key: db_pass
+                  name: app-secret
+                  key: db_pass
       nodeSelector:
-        zone: us-east-1a
+        failure-domain.beta.kubernetes.io/zone: us-east-1a
       volumes:
         - name: vpro-db-data
           awsElasticBlockStore:
