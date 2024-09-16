@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: vprodb
   labels:
@@ -34,7 +34,7 @@ spec:
       volumes:
         - name: vpro-db-data
           awsElasticBlockStore:
-            volumeID: vol-04ad22fdac2aade79
+            volumeID: vol-04ad22fda c2aade79
             fsType: ext4
 
       initContainers:
