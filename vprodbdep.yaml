@@ -36,7 +36,6 @@ spec:
           awsElasticBlockStore:
             volumeID: vol-04ad22fdac2aade79
             fsType: ext4
-
       initContainers:
         - name: busybox
           image: busybox:latest
